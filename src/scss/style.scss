@@ -41,7 +41,6 @@ $breakpoint: (
   .br-sp{display:block;}
 }
 
-
 body{
   font-family: 'Cormorant Garamond', serif;
   background-color:$black;
@@ -51,6 +50,22 @@ body{
 
 img{
   object-fit: cover;
+}
+
+#viewport{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#scroll-container {
+  position: absolute;
+  width: 100%;
 }
 
 .section{
