@@ -1,5 +1,5 @@
 //scss
-import '../scss/style.scss'
+import './../scss/style.scss'
 //js
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -44,7 +44,7 @@ const loaderAnimation = () => {
   })
   gsap.set(loaderName,{
     opacity:0,
-    y:50,
+    y:0
   })
 
   //AnimationStart
@@ -53,7 +53,7 @@ const loaderAnimation = () => {
     loaderName,
     {
       opacity: 1,
-      y: 50,
+      y:0,
       duration: 2,
     }
   )

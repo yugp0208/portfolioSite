@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';//viteの読み込み
 export default defineConfig({
   root: './src/', //開発ディレクトリ設定
   build: {
-    outDir: './dist/', //出力場所の指定
+    outDir: '../dist/', //出力場所の指定
 
     rollupOptions: { //ファイル出力設定
       output: {
@@ -24,6 +24,7 @@ export default defineConfig({
         },
         chunkFileNames: 'assets/js/[name].js',
         entryFileNames: 'assets/js/[name].js',
+        // 画像の出力先のパスを設定
       },
     },
   },
