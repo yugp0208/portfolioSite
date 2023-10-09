@@ -361,13 +361,26 @@ img{
   background-color:$thin-white;
   &__inner{
     padding:40px 0;
+    display: block;
   }
   &__txt{
     font-size:6.25rem;
     text-align: center;
     color:$black;
+    font-weight: bold;
+    transition:0.3s;
+    &:hover{
+      text-shadow: 1px 1px 0 #333, -1px -1px 0 #333, -1px 1px 0 #333, 1px -1px 0 #333, 0px 1px 0 #333, -1px 0 #333, -1px 0 0 #333, 1px 0 0 #333;
+      color:$white;
+      letter-spacing: 10px;
+    }
     @include mq(md){
       font-size:4rem;
+      &:hover{
+        text-shadow: 1px 1px 0 #333, -1px -1px 0 #333, -1px 1px 0 #333, 1px -1px 0 #333, 0px 1px 0 #333, -1px 0 #333, -1px 0 0 #333, 1px 0 0 #333;
+        color:$white;
+        letter-spacing: 1px;
+      }
     }
     @include mq(xs){
       font-size:15vw;
