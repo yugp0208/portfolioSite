@@ -97,9 +97,9 @@ img{
 /*header*/
 .header{
   width:100%;
+  position:sticky;
   top:0;
   z-index:9999;
-  position: relative;
   background-color:$black;
   color:$white;
   &__inner{

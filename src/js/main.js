@@ -6,6 +6,25 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 /*register*/
 gsap.registerPlugin(ScrollTrigger);
 
+//stickyHeader
+const stickyHeader = () =>  {
+  const headerElm = document.querySelector("#js-sticky-header");
+  const headerHeight = document.querySelector(".header").clientHeight;
+  if(headerElm.style.position = "sticky"){
+    let lp = 0;
+    window.addEventListener("scroll",function(){
+      headerElm.style.transition = "0.5s";
+      let cp = this.scrollY;
+      if(lp < cp){
+        headerElm.style.top = "-"+headerHeight+"px";
+      }
+      else if(lp > cp){
+        headerElm.style.top = 0;
+      }
+      lp = cp;
+    })
+  }
+}
 
 //notScroll
 function disableScroll() {
@@ -125,5 +144,6 @@ const drawer = () => {
   })
 }
 
+stickyHeader();
 drawer();
 loaderAnimation();
